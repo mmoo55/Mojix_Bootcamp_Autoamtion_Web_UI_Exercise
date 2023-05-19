@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 
 namespace ExerciseMojixBootcamp.src.code.control
 {
@@ -54,6 +56,12 @@ namespace ExerciseMojixBootcamp.src.code.control
             {
                 return false;
             }
+        }
+
+        public void WaitControlIsNotInThePage()
+        {
+            WebDriverWait explicitWait = new WebDriverWait(session.Session.Instance().GetBrowser(), TimeSpan.FromSeconds(10));
+            explicitWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(this.locator));
         }
     }
 }

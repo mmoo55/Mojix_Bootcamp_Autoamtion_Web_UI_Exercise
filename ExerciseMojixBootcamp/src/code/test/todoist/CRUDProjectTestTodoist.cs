@@ -41,15 +41,16 @@ namespace ExerciseMojixBootcamp.src.code.test.todoist
             // UPDATE
             projectSection.RightClickOnProject(projectCreated);
             menuProjectSection.editProjectLabel.Click();
+            createUpdateDeleteProjectSection.nameTxtBox.WaitControlIsNotInThePage();
             createUpdateDeleteProjectSection.nameTxtBox.SetText(projectUpdated);
             createUpdateDeleteProjectSection.addSaveDeleteButton.Click();
-            Assert.IsTrue(projectSection.IsProjectDisplayedInList(projectCreated+projectUpdated), "ERROR! the project was not updated");
+            Assert.IsTrue(projectSection.IsProjectDisplayedInList(projectUpdated), "ERROR! the project was not updated");
 
             // DELETE
-            projectSection.RightClickOnProject(projectCreated+projectUpdated);
+            projectSection.RightClickOnProject(projectUpdated);
             menuProjectSection.deleteProjectLabel.Click();
             createUpdateDeleteProjectSection.addSaveDeleteButton.Click();
-            Assert.IsFalse(projectSection.IsProjectDisplayedInList(projectCreated+projectUpdated), "ERROR! the project was not deleted");
+            Assert.IsFalse(projectSection.IsProjectDisplayedInList(projectUpdated), "ERROR! the project was not deleted");
 
 
         }

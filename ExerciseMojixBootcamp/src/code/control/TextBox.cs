@@ -16,6 +16,7 @@ namespace ExerciseMojixBootcamp.src.code.control
         public void SetText(String value)
         {
             FindControl();
+            control.Clear();
             control.SendKeys(value);
         }
 

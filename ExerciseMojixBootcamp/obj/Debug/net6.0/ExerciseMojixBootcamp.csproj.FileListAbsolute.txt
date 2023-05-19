@@ -105,3 +105,5 @@ C:\Users\Gerson\source\repos\VSTraining\ExerciseMojixBootcamp\ExerciseMojixBootc
 C:\Users\Gerson\source\repos\VSTraining\ExerciseMojixBootcamp\ExerciseMojixBootcamp\obj\Debug\net6.0\ExerciseMojixBootcamp.pdb
 C:\Users\Gerson\source\repos\VSTraining\ExerciseMojixBootcamp\ExerciseMojixBootcamp\obj\Debug\net6.0\ExerciseMojixBootcamp.genruntimeconfig.cache
 C:\Users\Gerson\source\repos\VSTraining\ExerciseMojixBootcamp\ExerciseMojixBootcamp\obj\Debug\net6.0\ref\ExerciseMojixBootcamp.dll
+C:\Users\Gerson\source\repos\VSTraining\ExerciseMojixBootcamp\ExerciseMojixBootcamp\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
+C:\Users\Gerson\source\repos\VSTraining\ExerciseMojixBootcamp\ExerciseMojixBootcamp\bin\Debug\net6.0\WebDriver.Support.dll
