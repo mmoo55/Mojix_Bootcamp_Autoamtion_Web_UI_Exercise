@@ -26,7 +26,7 @@ namespace ExerciseMojixBootcamp.src.code.test.todoist
         public void VerifyCRUDProject()
         {
             string projectCreated = "Prueba" + (DateTime.Now).ToString();
-            string projectUpdated = "Nuevo nombre" + (DateTime.Now).ToString();
+            string projectUpdated = "Nuevo nombre";
 
             mainPage.loginLabel.Click();
             loginPage.Login(USER, PASSWORD);
@@ -43,13 +43,13 @@ namespace ExerciseMojixBootcamp.src.code.test.todoist
             menuProjectSection.editProjectLabel.Click();
             createUpdateDeleteProjectSection.nameTxtBox.SetText(projectUpdated);
             createUpdateDeleteProjectSection.addSaveDeleteButton.Click();
-            Assert.IsTrue(projectSection.IsProjectDisplayedInList(projectUpdated), "ERROR! the project was not updated");
+            Assert.IsTrue(projectSection.IsProjectDisplayedInList(projectCreated+projectUpdated), "ERROR! the project was not updated");
 
             // DELETE
-            projectSection.RightClickOnProject(projectUpdated);
+            projectSection.RightClickOnProject(projectCreated+projectUpdated);
             menuProjectSection.deleteProjectLabel.Click();
             createUpdateDeleteProjectSection.addSaveDeleteButton.Click();
-            Assert.IsFalse(projectSection.IsProjectDisplayedInList(projectUpdated), "ERROR! the project was not deleted");
+            Assert.IsFalse(projectSection.IsProjectDisplayedInList(projectCreated+projectUpdated), "ERROR! the project was not deleted");
 
 
         }
