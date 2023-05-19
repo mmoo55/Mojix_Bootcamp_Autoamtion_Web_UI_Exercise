@@ -61,7 +61,7 @@ namespace ExerciseMojixBootcamp.src.code.control
         public void WaitControlIsNotInThePage()
         {
             WebDriverWait explicitWait = new WebDriverWait(session.Session.Instance().GetBrowser(), TimeSpan.FromSeconds(10));
-            explicitWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(this.locator));
+            explicitWait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(this.locator));
         }
     }
 }

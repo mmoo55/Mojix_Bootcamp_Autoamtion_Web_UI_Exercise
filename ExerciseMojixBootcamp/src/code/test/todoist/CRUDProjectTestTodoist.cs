@@ -42,7 +42,9 @@ namespace ExerciseMojixBootcamp.src.code.test.todoist
             projectSection.RightClickOnProject(projectCreated);
             menuProjectSection.editProjectLabel.Click();
             createUpdateDeleteProjectSection.nameTxtBox.WaitControlIsNotInThePage();
+            Thread.Sleep(200);
             createUpdateDeleteProjectSection.nameTxtBox.SetText(projectUpdated);
+            createUpdateDeleteProjectSection.addSaveDeleteButton.WaitControlIsNotInThePage();
             createUpdateDeleteProjectSection.addSaveDeleteButton.Click();
             Assert.IsTrue(projectSection.IsProjectDisplayedInList(projectUpdated), "ERROR! the project was not updated");
 
